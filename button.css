@@ -1,0 +1,48 @@
+.w-btn-outline {
+  position: relative;
+  padding: 6px 30px;
+  border-radius: 20px;
+  font-family: "paybooc-Light", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.w-btn-outline:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.w-btn-yellow-outline {
+  border: 4px solid #fce205;
+  color: #6e6e6e;
+  background-color: rgb(255, 255, 255);
+}
+.w-btn-yellow-outline:hover {
+  background-color: #fce205;
+  color: #6e6e6e;
+}
+.w-btn-animal-position {
+  top: -1215px;
+  left: -90px;
+}
+.w-btn-vegetable-position {
+  top: -1215px;
+  left: 200px;
+}
+.w-btn-fruit-position {
+  top: -1215px;
+  left: 470px;
+}
+.w-btn-cricket-position {
+  top: -930px;
+  left: -400px;
+}
+.w-btn-thing-position {
+  top: -930px;
+  left: -130px;
+}
+.w-btn-sea_animal-position {
+  top: -930px;
+  left: 120px;
+}

@@ -1,0 +1,64 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(241, 196, 15, 0.05);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#coloring_list {
+  text-align: center;
+}
+div {
+  display: block;
+}
+#logo {
+  text-align: center;
+  position: relative;
+  top: 0px;
+}
+#child {
+  position: relative;
+  top: -100px;
+  left: 170px;
+}
+#dog {
+  position: relative;
+  top: 0px;
+  left: -100px;
+}
+#cat {
+  position: relative;
+  top: 0px;
+  text-align: center;
+}
+#pig {
+  position: relative;
+  top: 0px;
+  left: 100px;
+}
+#draw_list {
+  text-align: center;
+}
+#ex {
+  text-align: center;
+}
+#memo {
+  position: relative;
+  top: -450px;
+  left: 1190px;
+}
+
+.coloringbook {
+  position: relative;
+  top: -80px;
+  left: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.button {
+  position: relative;
+  top: 7px;
+  left: 12px;
+}

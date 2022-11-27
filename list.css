@@ -1,0 +1,36 @@
+#animal {
+  position: relative;
+  top: 40px;
+  left: -400px;
+  object-fit: cover;
+}
+#vegetable {
+  position: relative;
+  top: -220px;
+  left: 0px;
+  object-fit: cover;
+}
+#fruit {
+  position: relative;
+  top: -450px;
+  left: 400px;
+  object-fit: cover;
+}
+#cricket {
+  position: relative;
+  top: -380px;
+  left: -400px;
+  object-fit: cover;
+}
+#thing {
+  position: relative;
+  top: -630px;
+  left: 30px;
+  object-fit: cover;
+}
+#sea_animal {
+  position: relative;
+  top: -900px;
+  left: 400px;
+  object-fit: cover;
+}

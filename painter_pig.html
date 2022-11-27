@@ -1,0 +1,204 @@
+<html>
+  <head>
+    <title>🎨알록달록 컬러링</title>
+    <link href="body.css" type="text/css" rel="stylesheet" />
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+
+      .jb_table {
+        display: table;
+      }
+
+      .row {
+        border-radius: 10px;
+        display: table-row;
+      }
+
+      .cell {
+        display: table-cell;
+        vertical-align: top;
+      }
+      .button{
+        cursor: pointer;
+        border:1x solid #ff0080;    
+        background-Color:#ffffff; 
+        padding:5px 0px;
+        width:80;height:28;
+        border-radius: 8px;
+        box-shadow:0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        color:rgba(0, 0, 0, 0.8);
+        font-weight:bold;        
+}
+  
+    </style>
+    
+  </head>
+  <body>
+    <body style="overflow:hidden;">
+      <div id="logo">
+        <img src="logo3.png">
+      </div>
+    <div class="jb_table">
+      <div class="row">
+        <span class="cell" width="82">
+          <div>
+            <div class="jb_table">
+              <div class="row">
+                <span class="cell">
+                  <img src="red.png" onclick="selectColor('red')" />
+                  <img src="pink.png" onclick="selectColor('pink')" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="orange.png" onclick="selectColor('orange')" />
+                  <img src="brown.png" onclick="selectColor('brown')" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="yellow.png" onclick="selectColor('yellow')" />
+                  <img src="white.png" onclick="selectColor('white')" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="green.png" onclick="selectColor('green')" />
+                  <img
+                    src="lightgreen.png"
+                    onclick="selectColor('lightgreen')"
+                  />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="lightblue.png" onclick="selectColor('lightblue')" />
+                  <img src="lightgray.png" onclick="selectColor('lightgray')" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="blue.png" onclick="selectColor('blue')" />
+                  <img src="gray.png" onclick="selectColor('gray')" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="purple.png" onclick="selectColor('purple')" />
+                  <img src="black.png" onclick="selectColor('black')" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="pencil.png" onclick="selectTool('pencil')" />
+                  <img src="line.png" onclick="selectTool('line')" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="circle.png" onclick="selectTool('ellipse')" />
+                  <img
+                    src="filledcircle.png"
+                    onclick="selectTool('filledellipse')"
+                  />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="square.png" onclick="selectTool('rect')" />
+                  <img
+                    src="filledsquare.png"
+                    onclick="selectTool('filledrect')"
+                  />
+                </span>
+              </div>
+
+              <div class="row">
+                <span class="cell">
+                  <img src="triangle.png" onclick="selectTool('tri')" />
+                  <img
+                    src="filledtriangle.png"
+                    onclick="selectTool('filledtri')"
+                  />
+                </span>
+              </div>
+              <div class="row">
+                <span class="cell">
+                  <img src="undo.png" onclick="undo()" />
+                  <img src="redo.png" onclick="redo()" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </span>
+        <span class="cell">
+          <div id="mex">
+            <canvas id="canvas" width="600" height="600"> </canvas>
+            <img class="coloringbook" src="돼지도안.png" width="450" height="450" />
+          </div>
+        </span>
+        <span class="cell"> 
+          <div><strong>Title </strong> <input id="title" size="15" /></div>
+          <div id = "button">
+            <a id="saveImage" download="image.png">
+              <input type="button" value="Save" onClick="saveImage()" class="button"/>
+            </a>
+            <input type="button" value="Clear" onClick="initPage()" class="button"/>
+          </div>
+          
+          <div calss="controls__range">
+            <p><strong> 선의 굵기 </strong></p>
+            <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1" />
+          </div>
+          <div>
+            <textarea
+              id="history"
+              cols="40"
+              rows="37"
+              style="display: none"
+            ></textarea>
+          </div>
+          <div id="command"></div>
+          <div></div>
+        </span>
+      </div>
+    </div>
+    <script src="painter.js"></script>
+    <script src="drawengine.js"></script>
+
+    <script language="javascript">
+            
+      function checkView(){
+  
+         //텍스트
+         var myText = document.getElementById("textbox").value;
+         //컬러
+         var myColor = document.getElementById("color").value;
+
+         cvs.font = "25px san-serif";
+         cvs.fillStyle = myColor;
+         cvs.fillText(myText, 20, 570);
+        
+      }
+
+   </script>
+<div id="memo"><table>
+  <input type="text" id="textbox"> &nbsp;
+  <input type="button" value="미리 보기" onclick="checkView()"> <br>
+  색상: <select id = "color" name="color">
+    <option value = "black">검정</option>
+     <option value = "red">빨강</option>
+     <option value = "blue">파랑</option>
+    
+  </select> <br>
+
+</table>
+   <div id="result">
+  </div>
+
+ </div>
+  </body>
+</html>
